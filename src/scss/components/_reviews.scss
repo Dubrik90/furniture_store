@@ -2,19 +2,22 @@
   background: var(--color-background);
   padding-top: 30px;
   padding-bottom: 30px;
+  overflow-x: auto;
 }
+
 .reviews__title {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 .reviews__list {
-  all: unset;
   display: flex;
   gap: 50px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scrollbar-width: auto;
+  scrollbar-width: none;
   padding: 15px 0;
 }
+
 .reviews__item {
   justify-self: center;
   position: relative;
@@ -27,6 +30,7 @@ margin-bottom: 20px;
   picture {
     width: 230px;
     max-height: 420px;
+
     img {
       object-fit: contain;
     }

@@ -1,120 +1,65 @@
-html {
-  box-sizing: border-box;
-}
-*,
-:after,
-:before {
-  box-sizing: inherit;
-}
-.disable-scroll {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
-.graph-modal {
-  --transition-time: 0.3s;
-  position: fixed;
-  // padding-top: 60px;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  overflow-y: auto;
-  overflow-x: hidden;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--transition-time), visibility var(--transition-time);
-}
-.graph-modal:before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
 .graph-modal__container {
-  position: relative;
-  width: 320px;
-  height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  background-color: var(--color-black);
-  border-radius: 5px;
-  padding-top: 50px;
-  // padding: 50px 10px 10px 10px;
-  cursor: default;
-  text-align: left;
-  display: none;
+  width: auto;
+  background-color: var(--color-background);
+  padding: 0 0 20px 0;
 
-  .graph-modal-open & {
-    display: inline-block;
-  }
-}
-@media (max-width: 1024px) {
-  .graph-modal__container {
-    // width: 90%;
-  }
-}
-.graph-modal__close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  border: none;
-  padding: 0;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  // background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512.001 512.001'%3E%3Cpath d='M284.286 256.002L506.143 34.144c7.811-7.811 7.811-20.475 0-28.285-7.811-7.81-20.475-7.811-28.285 0L256 227.717 34.143 5.859c-7.811-7.811-20.475-7.811-28.285 0-7.81 7.811-7.811 20.475 0 28.285l221.857 221.857L5.858 477.859c-7.811 7.811-7.811 20.475 0 28.285a19.938 19.938 0 0014.143 5.857 19.94 19.94 0 0014.143-5.857L256 284.287l221.857 221.857c3.905 3.905 9.024 5.857 14.143 5.857s10.237-1.952 14.143-5.857c7.811-7.811 7.811-20.475 0-28.285L284.286 256.002z'/%3E%3C/svg%3E");
-  cursor: pointer;
+  .graph-modal__close {
+    right: 20px;
+    top: 20px;
+    background-image: none;
 
-  span {
-    transform: scale(0);
+
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #f9fbfd;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: calc(50% - 1px);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      bottom: calc(50% - 1px);
+    }
+
+    span {
+      top: calc(50% - 1px);
+    }
+  }
+  .btn-reset {
+
+  }
+}
+
+.graph-modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ // color: var(--color-black);
+  width: 100%;
+
+  img {
+    max-height: 300px;
   }
 
-  &::before {
-    transform: rotate(-45deg);
-    top: calc(50% - 1px);
-  }
+  .modal__title {
+    font-size: 30px;
+    align-self: flex-start;
+    padding: 15px;
 
-  &::after {
-    transform: rotate(45deg);
-    bottom: calc(50% - 1px);
   }
 }
-.graph-modal.is-open {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity var(--transition-time), visibility var(--transition-time);
-}
-.fade {
-  opacity: 0;
-}
-.fade,
-.fade.animate-open {
-  transition: opacity var(--transition-time);
-}
-.fade.animate-open {
-  opacity: 1;
-}
-.fadeInUp {
-  opacity: 0;
-  transform: translateY(-100px);
-}
-.fadeInUp,
-.fadeInUp.animate-open {
-  transition: transform var(--transition-time), opacity var(--transition-time);
-}
-.fadeInUp.animate-open {
-  opacity: 1;
-  transform: translateY(0);
+
+.picture__block {
+  width: 100%;
+
 }

@@ -2,6 +2,9 @@ import "./_vendor";
 import vars from "./_vars";
 import "./_functions";
 import "./_components";
+import GraphModal from "graph-modal";
+
+const modal = new GraphModal();
 
 document.addEventListener('DOMContentLoaded', function() {
 
