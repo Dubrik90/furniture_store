@@ -1,7 +1,18 @@
+.graph-modal::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: auto;
+}
+
 .graph-modal__container {
   width: 560px;
   background-color: var(--color-background);
   padding: 0 0 20px 0;
+
+  @media (max-width: 600.98px) {
+    width: 100%;
+  }
 
   .graph-modal__close {
     right: 20px;
