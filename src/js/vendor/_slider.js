@@ -3,7 +3,7 @@ import Swiper, { Navigation, Pagination, EffectCoverflow } from 'swiper';
 
 Swiper.use([Navigation, Pagination, EffectCoverflow]);
 const swiper = new Swiper('.sofa__swiper', {
-  slidesPerView: 3,
+  slidesPerView: 4,
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 50,
