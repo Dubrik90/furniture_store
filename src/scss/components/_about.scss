@@ -104,12 +104,15 @@
 
   &::before {
     position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-right-width: 0;
-    border-color: transparent transparent transparent #646060;
+    width: 15px;
+    height: 15px;
+    background-color: #646060;
+  //  border-style: solid;
+   // border-right-width: 0;
+  //  border-color: transparent transparent transparent #646060;
     z-index: 5;
+    clip-path: polygon(20% 0, 20% 100%, 100% 48%);
+
   }
 
   &::after {
@@ -117,8 +120,8 @@
     border-radius: 50%;
     position: absolute;
     border: 0 solid #c4c4c4;
-    width: 42px;
-    height: 42px;
+    width: 35px;
+    height: 35px;
   }
 
   &.video-play {

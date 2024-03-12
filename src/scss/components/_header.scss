@@ -1,7 +1,7 @@
 .header {
   background-color: var(--color-black-opasity-header);
   padding: 17px 0;
-  height: 60px;
+  height: 65px;
   position: fixed;
   top: 0;
   left: 0;
@@ -26,25 +26,26 @@
   }
 
   .logo-icon {
-    width: 60px;
-   height: 60px;
-    g {
-      fill: #e4edf7;
+   width: 100px;
+   height: 50px;
+    path {
+      fill: var(--light-color);
+      stroke: var(--light-color);
     }
 
   }
 }
 
 .nav {
-  @media (max-width: 1040.98px) {
+  @media (max-width: 1084.98px) {
     display: none;
   }
 
   &__list {
     display: flex;
-    column-gap: 30px;
+    column-gap: 40px;
     @media (max-width: 1440.98px) {
-      column-gap: 20px;
+      column-gap: 30px;
     }
   }
 
@@ -52,7 +53,7 @@
   }
 
   &__link {
-    color: #f9fbfd;
+    color: var(--light-color);
     transition: color 0.3s ease-in-out;
 
     @media (max-width: 1440.98px) {
@@ -71,7 +72,7 @@
     }
 
     &:active {
-      color: #961e01;
+      color: var(--color-red);
     }
   }
 }
@@ -285,7 +286,7 @@
     }
 
     &:active {
-      color: #961e01;
+      color: var(--color-red);
     }
   }
 }
@@ -349,7 +350,7 @@
       }
 
       &:active {
-        color: #961e01;
+        color: var(--color-red);
       }
     }
   }
@@ -371,7 +372,7 @@
       }
 
       &:active {
-        color: #961e01;
+        color: var(--color-red);
       }
     }
   }
