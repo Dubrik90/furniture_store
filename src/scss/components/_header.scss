@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--color-black);
+  background-color: var(--color-black-opasity-header);
   padding: 17px 0;
   height: 60px;
   position: fixed;
@@ -23,6 +23,15 @@
   .logo {
     font-size: 25px;
     color: var(--light-color);
+  }
+
+  .logo-icon {
+    width: 60px;
+   height: 60px;
+    g {
+      fill: #e4edf7;
+    }
+
   }
 }
 
